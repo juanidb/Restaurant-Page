@@ -7,7 +7,7 @@ const newTitle = content => {
     return title;
 }
 
-// function to add a paragraph
+// function to create a paragraph
 
 const newParag = content => {
     const parag = document.createElement('p');
@@ -16,7 +16,7 @@ const newParag = content => {
     return parag
 }
 
-// function to add an image
+// function to create an image
 
 const newImg = (imgSrc, alt) => {
     const img = document.createElement('img');
