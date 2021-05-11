@@ -1,17 +1,50 @@
-// importing the functions
+// importing the functions.
 
 import {newTitle, newParag, newImg} from './page-load.js';
 import {menuInfo} from './menu.js'
 import {contactInfo} from './contact.js';
 
+// main div.
 const content = document.getElementById('content');
 
-content.appendChild(newTitle('myRestaurant Page'));
+//creatiang the buttons.
 
-content.appendChild(newImg('../src/images/myRestaurant.jpeg', 'restaurant image'));
+const homeBtn = document.createElement('button');
+const menuBtn = document.createElement('button');
+const contactBtn = document.createElement('button');
 
-content.appendChild(newParag('Dining out presents a great opportunity to unwind, relax and enjoy a delicious meal in a great atmosphere. While this is what most people are looking for when they decide to dine out, it is not always what they get. There are some very good restaurants, but unfortunately, they are few and far between. People will always make a return visit when they enjoy the dining experience and it is to everyone’s advantage for the restaurant to up its game! Following are some of the qualities or characteristics that distinguish between a great restaurant and other restaurants.'));
+homeBtn.innerHTML = 'Home';
+menuBtn.innerHTML = 'Menu';
+contactBtn.innerHTML = 'Contact';
 
-content.appendChild(menuInfo('pan con queso', 'queso con pan', 'jamon crudo'));
+content.appendChild(homeBtn);
+content.appendChild(menuBtn);
+content.appendChild(contactBtn);
 
-content.appendChild(contactInfo('9 platardos', 428740, 'bunge de galvez 29', 'pepitalapistolera@gmail.com'))
+// adding the functions to the homeButton.
+
+homeBtn.addEventListener('click', (e) => {
+    // creating a div and appending its parts.
+    let homePage = document.createElement('div');
+    homePage.setAttribute('class', 'home-page');
+    homePage.appendChild(newTitle('Not a Real Restaurant'));
+    //homePage.appendChild(newImg('img'));
+    homePage.appendChild(newParag(`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`));
+    homePage.appendChild(newParag(`Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.`));
+    homePage.appendChild(newParag(`t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`));
+    content.appendChild(homePage);
+});
+
+//adding the functionality to the menu button.
+
+menuBtn.addEventListener('click', (e) => {
+    //creating and appending the menu list.
+    content.appendChild(menuInfo('bread', 'cheese', 'burger', 'steak', 'pizza', 'sandwich', 'pie'));
+});
+
+//adding the functionality to the contact menu.
+
+contactBtn.addEventListener('click', (e) => {
+    content.appendChild(contactInfo('Not a Real Restaurant', '+43-688-5559-987', '2962  Hickory Ridge Drive', '57qtxnd5139@temporary-mail.net'));
+});
+

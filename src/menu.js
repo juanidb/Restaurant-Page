@@ -1,6 +1,5 @@
 //function to create a the menu div.
 
-console.log('porq carga esto');
 
 const menuInfo = (...items) => {
     let menuDiv = document.createElement('div');

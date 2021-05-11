@@ -1,4 +1,4 @@
-//function to create a the contact div.
+//function to create a the contact div with a name, phone, direction and email.
 
 const contactInfo = (name, phone, direction, email) => {
     let contactDiv = document.createElement('div');
@@ -7,7 +7,7 @@ const contactInfo = (name, phone, direction, email) => {
     let contactDirection = document.createElement('h3');
     let contactEmail = document.createElement('h3');
     contactName.innerHTML = name;
-    contactPhone.innerHTML = 'Phone number: ' + Number(phone);
+    contactPhone.innerHTML = 'Phone number: ' + phone;
     contactDirection.innerHTML = 'Adress: ' + direction;
     contactEmail.innerHTML = 'E-mail: ' + email; 
     contactDiv.appendChild(contactName);
