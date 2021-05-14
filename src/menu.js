@@ -17,4 +17,6 @@ const menuInfo = (...items) => {
     return menuDiv;
 }
 
+// for more detailed menu I should make a function to create food objects.
+
 export {menuInfo}

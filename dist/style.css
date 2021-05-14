@@ -1,0 +1,48 @@
+body{
+    margin: auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.buttons-div{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    background-color: darkgoldenrod;
+    align-items: center;
+}
+.buttons{
+    width: 30%;
+    border: none;
+    font-size: 20px;
+    height: 80%;
+    border-radius: 7px;
+    
+}
+.buttons:hover{
+    background-color: burlywood;
+}
+
+.buttons:active{
+    background-color: rgb(146, 105, 3);
+}
+
+.home-page{
+    margin: 50px;
+    font-size: 20px;
+}
+.menu-page{
+    margin: 25px;
+    font-size: 20px;
+}
+ul{
+    text-align: justify;
+    margin-left: 100px;
+}
+li{
+    display: list-item;
+}
+.contact-page{
+    margin-top: 130px;
+    font-size: 25px;
+}
