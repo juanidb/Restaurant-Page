@@ -10,7 +10,9 @@ const menuInfo = (...items) => {
     let menuList = document.createElement('ul');
     items.forEach(item => {
         let menuItem = document.createElement('li');
-        menuItem.innerHTML = item;
+        let splitedItem = item.split(', ');
+        menuItem.innerHTML = `${splitedItem[0]} ${' . '.repeat(65 - splitedItem[0].length)} $${splitedItem[1]}`;
+        menuItem.setAttribute('style', 'margin-top: 7px;')
         menuList.appendChild(menuItem);
     });
     menuDiv.appendChild(menuList);

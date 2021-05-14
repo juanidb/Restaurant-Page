@@ -40,7 +40,7 @@ homePage.appendChild(newParag(`Contrary to popular belief, Lorem Ipsum is not si
 homePage.appendChild(newParag(`t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`));
 
 
-const menuPage = menuInfo('bread', 'cheese', 'burger', 'steak', 'pizza', 'sandwich', 'pie');
+const menuPage = menuInfo('bread, 3.50', 'cheese, 5', 'burger, 7.50', 'steak, 15', 'pizza, 12', 'sandwich, 8', 'pie, 11');
 
 
 //creating the var with the contact page outside of the button.
@@ -76,4 +76,4 @@ homeBtn.addEventListener('click', (e) => {
     else if (!content.contains(homePage)) content.appendChild(homePage);
     });
 //clicking the home button so the page loads with this and not empty.
- homeBtn.click();
+ menuBtn.click();
